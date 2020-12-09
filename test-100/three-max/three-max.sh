@@ -5,19 +5,19 @@ read -p "请输入第二个数字：" num2
 read -p "请输入第三个数字：" num3
 
 # 检查输入的数字是否合法
-echo $num1 | grep [^0-9]
+echo $num1 | grep [^0-9] > /dev/null
 if [ $? -eq 0 ]; then
     echo "$num1 不是数字"
     exit 0
 fi
 
-echo $num2 | grep [^0-9]
+echo $num2 | grep [^0-9] > /dev/null
 if [ $? -eq 0 ]; then
     echo "$num2 不是数字"
     exit 0
 fi
 
-echo $num3 | grep [^0-9]
+echo $num3 | grep [^0-9] > /dev/null
 if [ $? -eq 0 ]; then
     echo "$num3 不是数字"
     exit 0
